@@ -1,6 +1,6 @@
 {
   "name": "jensendw/traefik",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Daniel Jensen",
   "summary": "Module for installing and managing traefik reverse proxy service",
   "license": "Apache-2.0",
