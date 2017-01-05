@@ -26,4 +26,9 @@ class traefik::install {
     require => Exec["${traefik::package_name}-${traefik::version}"],
   }
 
+  file {"/opt/${traefik::package_name}/${traefik::package_name}-${traefik::version}":
+    mode    => '0755',
+    require => Exec["${traefik::package_name}-${traefik::version}"],
+  }
+
 }
