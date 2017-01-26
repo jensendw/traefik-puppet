@@ -4,7 +4,7 @@ Wants=basic.target
 After=basic.target network.target
 
 [Service]
-ExecStart=/opt/<%= @package_name %>/<%= @package_name %> -c <%= @config_file_path %>
+ExecStart=/opt/<%= scope.lookupvar("traefik::package_name") %>/<%= scope.lookupvar("traefik::package_name") %> -c <%= scope.lookupvar("traefik::config_file_path") %>
 KillMode=process
 Restart=on-failure
 RestartSec=42s
