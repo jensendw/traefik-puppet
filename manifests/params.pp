@@ -6,7 +6,6 @@ class traefik::params {
   $package_name                   = 'traefik'
   $download_url_base              = 'https://github.com/containous/traefik/releases/download/'
   $version                        = '1.1.2'
-  $version_url                    = "v${version}"
   $service_name                   = 'traefik'
   $download_package_name          = 'traefik_linux-amd64'
   $config_path                    = '/etc/traefik'

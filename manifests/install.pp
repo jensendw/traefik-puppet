@@ -14,7 +14,7 @@ class traefik::install {
   }
 
   exec { "${traefik::package_name}-${traefik::version}":
-    command => "wget --no-check-certificate --output-document=/opt/${traefik::package_name}/${traefik::package_name}-${traefik::version} ${traefik::download_url_base}${traefik::version_url}/${traefik::download_package_name}",
+    command => "wget --no-check-certificate --output-document=/opt/${traefik::package_name}/${traefik::package_name}-${traefik::version} ${traefik::download_url_base}v${traefik::version}/${traefik::download_package_name}",
     creates => "/opt/${traefik::package_name}/${traefik::package_name}-${traefik::version}",
     require => [ File["/opt/${traefik::package_name}"], Package['wget'] ],
     path    => '/usr/bin',

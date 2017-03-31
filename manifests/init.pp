@@ -6,7 +6,6 @@ class traefik (
   $package_name                   = $traefik::params::package_name,
   $download_url_base              = $traefik::params::download_url_base,
   $version                        = $traefik::params::version,
-  $version_url                    = $traefik::params::version_url,
   $service_name                   = $traefik::params::service_name,
   $download_package_name          = $traefik::params::download_package_name,
   $init_style                     = $traefik::params::init_style,
