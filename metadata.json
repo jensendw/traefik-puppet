@@ -4,9 +4,9 @@
   "author": "Daniel Jensen",
   "summary": "Module for installing and managing traefik reverse proxy service",
   "license": "Apache-2.0",
-  "source": "https://github.com/jensendw/traefik.git",
-  "project_page": "https://github.com/jensendw/traefik",
-  "issues_url": "https://github.com/jensendw/traefik/issues",
+  "source": "https://github.com/jensendw/traefik-puppet.git",
+  "project_page": "https://github.com/jensendw/traefik-puppet",
+  "issues_url": "https://github.com/jensendw/traefik-puppet/issues",
   "dependencies": [],
   "data_provider": null,
   "operatingsystem_support": [
