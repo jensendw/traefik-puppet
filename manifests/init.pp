@@ -12,6 +12,7 @@ class traefik (
   $init_path                      = $traefik::params::init_path,
   $config_file_path               = $traefik::params::config_file_path,
   $config_path                    = $traefik::params::config_path,
+  $file_limit                     = $traefik::params::file_limit,
 
   ) inherits traefik::params {
 

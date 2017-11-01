@@ -9,8 +9,33 @@ class traefik::config {
     require => File["/opt/${traefik::package_name}/${traefik::package_name}-${traefik::version}"],
   }
 
+  file { '/etc/systemd/system/traefik.service.d':
+    ensure  => 'directory',
+    require => File["/opt/${traefik::package_name}/${traefik::package_name}-${traefik::version}"],
+  }
+
+  file { '/etc/systemd/system/traefik.service.d/limits.conf':
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+    content => template('traefik/limits.conf.erb'),
+    require => File['/etc/systemd/system/traefik.service.d'],
+  }
+
+  exec { 'reload_configuration':
+    command     => 'systemctl daemon-reload',
+    path        => '/usr/local/bin/:/bin/',
+    subscribe   => [
+      File['/etc/systemd/system/traefik.service.d/limits.conf'],
+    ],
+    refreshonly => true,
+  }
+
   file { $traefik::config_path:
     ensure => directory,
   }
+
+
 
 }

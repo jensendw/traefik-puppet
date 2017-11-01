@@ -10,7 +10,7 @@ class traefik::params {
   $download_package_name          = 'traefik_linux-amd64'
   $config_path                    = '/etc/traefik'
   $config_file_path               = "${config_path}/traefik.toml"
-
+  $file_limit                     = '60000'
 
   #set init style
   if $::operatingsystem =~ /Scientific|CentOS|RedHat|OracleLinux/ {
