@@ -5,7 +5,7 @@
 class traefik::config {
   file { $traefik::init_path:
     content => template("traefik/traefik.${traefik::init_style}.erb"),
-    mode    => '0755',
+    mode    => '0644',
     require => File["/opt/${traefik::package_name}/${traefik::package_name}-${traefik::version}"],
   }
 
